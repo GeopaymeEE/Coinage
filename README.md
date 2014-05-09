@@ -9,6 +9,7 @@ Unit tests from requirements:
 - Invalid inputs are correctly rejected.
 - Valid inputs are converted to a number of pennies which can be re-totalled to initial amount.
 
-Suggested enhancements:
+Suggested enhancements with more time to spend on project:
 - Use checkbox interface to allow/disallow certain coins.
-- USe BDD tools to automate testing of behaviour of the interface.
+- Use BDD tools to automate testing of behaviour of the interface.
+- Correct ordering of coins to be numeric instead of alphabetic (not specified in prequirements)
