@@ -1,0 +1,21 @@
+<section id="coinage-app">
+	<header>		
+		<h1>Coinage!</h2>
+	</header>
+	<div id="coinage-main">
+		<p>Use this handy app to convert any monetary value into specific coins.</p>
+		<form id="coinage-form">
+			<input type="text" id="input-value" name="input-value" ng-model="jValues.sCoinageInput"><label id="input-label" for="input-value">Enter monetary value in GBP.</label>
+			<br>
+			<button id="submit-value" ng-click="submitValue();">Convert</button>
+		</form>
+		<div id="coinage-message">{{jValues.sCoinageMessage}}</div>
+		<div id="coinage-results">		
+			<div class="coinage-item top-row">Coin<span class="coinage-value">Amount</span></div>
+			<div class="coinage-item" ng-repeat="(sCoin, sAmount) in oPennySplits">{{sCoin}}<span class="coinage-value">{{sAmount}}</span></div>
+		</div>
+	</div>
+	<footer>		
+		&copy; Broadmargins {{year}}
+	</footer>
+</section>

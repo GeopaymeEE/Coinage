@@ -1,0 +1,71 @@
+body {
+	color: #006;
+}
+
+h1, p {
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+}
+
+#coinage-app {
+	width: 30%;
+	border: 1px solid #ccc;
+	margin: 10px;
+	min-width: 300px;
+}
+
+#coinage-form {
+	margin: 5px 0;
+}
+
+#input-value {
+	margin-right: 5px; 
+	width: 50px;
+}
+
+#submit-value {
+	margin-top: 5px;
+}
+
+#input-label {
+	font-size: 12px;
+}
+
+#coinage-app header, #coinage-app footer {
+	background: #ccf;
+	padding: 5px;
+}
+
+#coinage-app footer {
+	text-align: center;
+	font-size: 11px;
+}
+
+#coinage-main {
+	background: #f5f5ff;
+	padding: 5px;
+}
+
+#coinage-results {
+	border: 1px solid #ccc;
+	background: white;
+	padding: 5px;
+}
+
+#coinage-summary {
+	margin-bottom: 5px;
+	font-style: italic;
+}
+
+.coinage-item {
+	border-bottom: 1px solid #f5f5ff;
+}
+
+.coinage-item.top-row {
+	font-weight: bold;
+}
+
+.coinage-value {
+	float: right;
+}

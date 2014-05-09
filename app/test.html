@@ -1,0 +1,41 @@
+<script>
+var aCoins = ['1p','2p','20p','50p','£1','£2'];
+var aPennyCoins = [];
+var oCoinSplit = {};
+
+function updatePennyCoinsArray() {
+	aPennyCoins = [];
+	for (var c = 0, cl = aCoins.length; c < cl; c++) {
+		aPennyCoins.push(convertToPennies(aCoins[c]));
+	}
+}
+
+function splitCoins(iAmount) {
+	if (!aPennyCoins.length) {
+		updatePennyCoinsArray();
+	}
+	var jData = {};
+	var pcl = aPennyCoins.length;
+	while (pcl--) {
+		iCurrentCoinCount = Math.floor(iAmount/aPennyCoins[pcl]);
+		if (iCurrentCoinCount) {
+			jData[aCoins[pcl]] = iCurrentCoinCount;
+		}
+		iAmount = iAmount%aPennyCoins[pcl];
+	}
+	return jData;
+}
+
+function convertToPennies(sInput) {
+	var regexp = /^£?\d+(\.\d*)?p?$/, iNum;
+	if (regexp.test(sInput)) {
+		if (sInput.indexOf('£')>-1||sInput.indexOf('.')>-1) {
+			return parseFloat(sInput.indexOf('£')>-1?sInput.slice(1):sInput).toFixed(2)*100;
+		} else {
+			return parseInt(sInput);
+		}
+	} else {
+		return false;
+	}	
+}
+</script>
