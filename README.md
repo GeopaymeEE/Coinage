@@ -12,4 +12,4 @@ Unit tests from requirements:
 Suggested enhancements with more time to spend on project:
 - Use checkbox interface to allow/disallow certain coins.
 - Use BDD tools to automate testing of behaviour of the interface.
-- Correct ordering of coins to be numeric instead of alphabetic (not specified in prequirements)
+- Correct ordering of coins to be numeric instead of alphabetic (not specified in requirements)
