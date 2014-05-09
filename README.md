@@ -13,3 +13,4 @@ Suggested enhancements with more time to spend on project:
 - Use checkbox interface to allow/disallow certain coins.
 - Use BDD tools to automate testing of behaviour of the interface.
 - Correct ordering of coins to be numeric instead of alphabetic (not specified in requirements)
+- Fix bug caused by floating point issue - Convert £4.89 for evidence of JavaScript floating point error http://stackoverflow.com/questions/588004/is-floating-point-math-broken
