@@ -1,11 +1,10 @@
 body {
-	color: #006;
 }
 
 h1, p {
 	padding: 0;
 	margin: 0;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 #coinage-app {
@@ -13,6 +12,8 @@ h1, p {
 	border: 1px solid #ccc;
 	margin: 10px;
 	min-width: 300px;
+	color: #006;
+	font-size: 14px;
 }
 
 #coinage-form {
@@ -21,7 +22,7 @@ h1, p {
 
 #input-value {
 	margin-right: 5px; 
-	width: 70px;
+	width: 50px;
 }
 
 #submit-value {
@@ -32,12 +33,12 @@ h1, p {
 	font-size: 12px;
 }
 
-#coinage-app header, #coinage-app footer {
+#coinage-app header, #coinage-app footer, #coinage-message {
 	background: #ccf;
 	padding: 5px;
 }
 
-#coinage-app footer {
+#coinage-app footer, #coinage-message {
 	text-align: center;
 	font-size: 11px;
 }
@@ -58,6 +59,19 @@ h1, p {
 	font-style: italic;
 }
 
+#coinage-pennies-config {
+	border: 1px solid #ccc;
+	background: white;
+	padding: 3px;
+	text-align: center;
+}
+
+.coinage-penny-config {
+	width: 25px;
+	padding: 0 10px;
+	display: inline-block;
+}
+
 .coinage-item {
 	border-bottom: 1px solid #f5f5ff;
 }
@@ -67,5 +81,11 @@ h1, p {
 }
 
 .coinage-value {
+	float: right;
+}
+
+.coinage-toggle-enhancements {
+	cursor: pointer;
+	font-size: 10px;
 	float: right;
 }

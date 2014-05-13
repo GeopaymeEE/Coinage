@@ -1,3 +1,3 @@
 'use strict';
 
-var oCoinageApp = angular.module('coinageApp', []);
+angular.module('coinageApp', []);

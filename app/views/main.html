@@ -1,18 +1,22 @@
 <section id="coinage-app">
 	<header>		
-		<h1>Coinage!</h2>
+		<h1>Coinage v1.01<span class="coinage-toggle-enhancements" ng-click="toggleEnhancements();" title="Toggle Usability Enhancements">[?]</span></h2>
 	</header>
 	<div id="coinage-main">
-		<p>Use this handy app to convert any monetary value into specific coins.</p>
+		<div id="coinage-pennies-config" ng-show="jValues.bShowEnhancements">
+			<div class="coinage-penny-config"  ng-repeat="jCoin in aCoins">
+				<label id="coin-{{$index}}-config-label" for="coin-{{$index}}-config">{{jCoin.sCoin}}</label>
+				<input type="checkbox" name="coin-{{$index}}-config" id="coin-{{$index}}-config" ng-model="jCoin.bEnabled">
+			</div>
+		</div>
 		<form id="coinage-form">
-			<input type="text" id="input-value" name="input-value" ng-model="jValues.sCoinageInput"><label id="input-label" for="input-value">Enter monetary value in GBP.</label>
-			<br>
-			<button id="submit-value" ng-click="submitValue();">Convert</button>
+			<label id="input-label" for="input-value">Enter monetary value in GBP for coin conversion.</label>
+			<input type="text" id="input-value" name="input-value" ng-model="jValues.sCoinageInput"><button id="submit-value" ng-click="handleSubmitValue();">Convert</button>
 		</form>
-		<div id="coinage-message">{{jValues.sCoinageMessage}}</div>
-		<div id="coinage-results">		
+		<div id="coinage-message" ng-show="jValues.sCoinageMessage">{{jValues.sCoinageMessage}}</div>
+		<div id="coinage-results" ng-show="bPennified">		
 			<div class="coinage-item top-row">Coin<span class="coinage-value">Amount</span></div>
-			<div class="coinage-item" ng-repeat="(sCoin, sAmount) in oPennySplits">{{sCoin}}<span class="coinage-value">{{sAmount}}</span></div>
+			<div class="coinage-item" ng-repeat="jCoin in aCoins"  ng-show="jCoin.iCoinCount > 0">{{jCoin.sCoin}}<span class="coinage-value">{{jCoin.iCoinCount}}</span></div>
 		</div>
 	</div>
 	<footer>		
