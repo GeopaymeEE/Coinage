@@ -59,11 +59,13 @@ describe('Controller: MainCtrl', function () {
 		var iPennyValue = scope.convertToPennies(aInputValues[v]),
 		iTotal = 0;
 		scope.jValues.sCoinageInput = aInputValues[v];
-		scope.submitValue();
-		for (var sPenny in scope.oPennySplits) {
-			iTotal+=scope.convertToPennies(sPenny)*scope.oPennySplits[sPenny];
+		scope.handleSubmitValue();
+		for (var c = 0, cl = scope.aCoins.length; c < cl; c++) {
+			iTotal+=scope.aCoins[c].iPennies*scope.aCoins[c].iCoinCount;
 		}
 		expect(iTotal).toBe(iPennyValue);
 	}
   });
+  
+  
 });
